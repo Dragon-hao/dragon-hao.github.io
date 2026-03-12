@@ -15,7 +15,7 @@ mermaid: false
 <!-- more -->
 
 ## 正文
-基于开源项目[KuiperLLama]([新建标签页](https://github.com/zjhellofss/KuiperLLama))，实现了Softmax算子。
+基于开源项目[KuiperLLama](https://github.com/zjhellofss/KuiperLLama)，实现了Softmax算子。
 主体分为两部分：
 * `softmax_kernel_inplace_cu`，接口函数。框架在`kDeviceCUDA`类型的设备上进行softmax计算时，调用这个函数
 * `row_softmax_f32`，核函数。进行具体的softmax算子的实现，其基本执行流程如下：
