@@ -25,7 +25,7 @@ mermaid: false
 	4. 计算最终的softmax值，并写回
 重点介绍一下 `row_softmax_f32`的实现细节：
 * 函数开头的`template <int32_t BLOCK_DIM>`声明了一个模板类型`BLOCK_DIM`，因为`cub`库强制要求在**代码编译阶段**就必须知道线程数到底是多少，以便提前分配好硬件资源。所以通过模板类型声明了一个占位符，编译器看到`row_softmax_f32<128>(...)`这个调用时，会用128替换占位符
-* 待续....
+* 待续...
 具体代码如下：
 ```c++
 template <int32_t BLOCK_DIM>  
